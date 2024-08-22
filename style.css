@@ -31,6 +31,7 @@ ul {
   list-style: none;
 }
 
+
 a  {
   display: block;
   padding: 17px 30px;
@@ -63,6 +64,8 @@ a  {
   position: relative;
   text-align: center;
   border: 1px #3f4852 solid;
+  border-top: none;
+  border-bottom: none;
 }
 
 .products > li:first-child,
@@ -78,19 +81,47 @@ a  {
 
 
 
-.technique{
+.technique {
   background-color: #2a3644;
   border-radius: 3px;
 }
 
-.technique li{
+.technique li {
   position: relative;
   flex-grow: 1;
   text-align: center;
-  border-width: 1px #3f4852 solid;
+  border: 1px #3f4852 solid;
 }
 
 
+.border-first:hover a {
+  border-radius: 3px 0 0 3px;
+}
+
+.border-last:hover a {
+  border-radius: 0 3px 3px 0;
+}
+
+.border-top:hover a {
+  border-radius: 3px 3px 0 0;
+}
+
+.border-bottom:hover a,
+.border-bottom:hover {
+  border-radius: 0 0 3px 3px;
+}
+
+.border-side-top:hover a {
+  border-radius: 3px 0 0 0;
+}
+
+.border-side-bottom:hover a {
+  border-radius: 0 0 0 3px;
+}
+
+.border-side-right:hover a {
+  border-radius: 0 3px 0 0;
+}
 
 li:hover > a {
   color: #ff8505;
@@ -185,7 +216,7 @@ li:hover > .sub-menu {
   position: relative;
   flex-grow: 1;
   text-align: center;
-  border-width: 1px #3f4852 solid;
+  border: 1px #3f4852 solid;
 }
 
 .home {
@@ -286,7 +317,7 @@ li:hover .services-menu{
 
 .social a {
   display: block;
-  background: url(../img/sprite-social.png) no-repeat;
+  background: url("../img/sprite-social.png") no-repeat;
   background-position: 0 0;
   width: 50px;
   height: 20px;
